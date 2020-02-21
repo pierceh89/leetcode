@@ -2,6 +2,7 @@ package io.github.pierceh89.leetcode;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 /**
  * Similar to TwoSum problem
@@ -31,5 +32,49 @@ public class ThreeSum {
         }
         return solutions.stream().map(it -> it.stream().collect(Collectors.toList()))
                 .collect(Collectors.toList());
+    }
+
+    // from https://github.com/haoel/leetcode/blob/master/algorithms/cpp/3Sum/3Sum.cpp
+    // Time Complexity is O(n^2)
+    // http://en.wikipedia.org/wiki/3SUM
+    public List<List<Integer>> threeSum2(int[] nums) {
+        List<Integer> numList =  Arrays.stream(nums).boxed().collect(Collectors.toList());
+        List<List<Integer>> solutions = new ArrayList<>();
+        // sort array
+        Collections.sort(numList);
+        int n = numList.size();
+
+        for (int i=0; i < n-2; i++) {
+            if (i > 0 && numList.get(i-1).equals(numList.get(i))) continue;
+            int a = numList.get(i);
+            int low = i + 1;
+            int high = n - 1;
+            while (low < high) {
+                int b = numList.get(low);
+                int c = numList.get(high);
+                if (a + b + c == 0) {
+                    // solution
+                    List<Integer> sol = new ArrayList<>();
+                    sol.add(a);
+                    sol.add(b);
+                    sol.add(c);
+                    solutions.add(sol);
+
+                    while(low < high && numList.get(low).equals(numList.get(low+1))) low++;
+                    while(low < high && numList.get(high-1).equals(numList.get(high))) high--;
+                    low++;
+                    high--;
+                } else if (a+b+c > 0) {
+                    // skip the duplication
+                    while (high > 0 && numList.get(high).equals(numList.get(high-1))) high--;
+                    high--;
+                } else {
+                    // skip the duplication
+                    while (low < n -1 && numList.get(low).equals(numList.get(low+1))) low++;
+                    low++;
+                }
+            }
+        }
+        return solutions;
     }
 }

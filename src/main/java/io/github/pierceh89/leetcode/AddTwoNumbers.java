@@ -1,5 +1,7 @@
 package io.github.pierceh89.leetcode;
 
+import io.github.pierceh89.leetcode.ds.ListNode;
+
 public class AddTwoNumbers {
 
     /**
@@ -10,11 +12,6 @@ public class AddTwoNumbers {
      * ListNode(int x) { val = x; }
      * }
      */
-    public static class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) { val = x; }
-    }
 
 //    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 //        int val = l1.val + l2.val;
