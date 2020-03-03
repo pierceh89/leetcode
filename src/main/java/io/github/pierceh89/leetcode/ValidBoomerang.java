@@ -3,7 +3,7 @@ package io.github.pierceh89.leetcode;
 /**
  * 1037. Valid Boomerang
  */
-public class ValidBoomerange {
+public class ValidBoomerang {
 	public boolean isBoomerang(int[][] points) {
         // check straight line
         if(isStraight(points,0) || isStraight(points,1)) {
