@@ -1,6 +1,6 @@
 package io.github.pierceh89.leetcode;
 
-import io.github.pierceh89.leetcode.ds.TreeNode;
+import io.github.pierceh89.ds.TreeNode;
 
 import java.util.*;
 import java.util.stream.Collectors;

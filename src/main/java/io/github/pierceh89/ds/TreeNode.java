@@ -1,4 +1,4 @@
-package io.github.pierceh89.leetcode.ds;
+package io.github.pierceh89.ds;
 
 public class TreeNode {
     public int val;

@@ -1,6 +1,6 @@
 package io.github.pierceh89.leetcode;
 
-import io.github.pierceh89.leetcode.ds.TreeNode;
+import io.github.pierceh89.ds.TreeNode;
 
 /**
  * 700. Search in a Binary Search Tree

@@ -1,5 +1,7 @@
 package io.github.pierceh89.leetcode;
 
+import io.github.pierceh89.ds.TreeNode;
+
 class MaximumDepthOfBinaryTree {
 	public int maxDepth(TreeNode root) {
         return maxDepth(root, 1);

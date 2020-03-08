@@ -1,4 +1,4 @@
-package io.github.pierceh89.leetcode.ds;
+package io.github.pierceh89.ds;
 
 import java.util.*;
 

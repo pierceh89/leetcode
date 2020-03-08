@@ -1,6 +1,6 @@
 package io.github.pierceh89.leetcode;
 
-import io.github.pierceh89.leetcode.ds.ListNode;
+import io.github.pierceh89.ds.ListNode;
 
 /**
  * Time complexity is O(m + n)

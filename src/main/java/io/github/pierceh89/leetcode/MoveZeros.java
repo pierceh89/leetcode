@@ -4,7 +4,7 @@ package io.github.pierceh89.leetcode;
  * 283. Move Zeros
  */
 class MoveZeros {
-	public void moveZeroes(int[] nums) {
+	public void moveZeroesSolution(int[] nums) {
         int lastNonZeroFoundAt=0;
         for(int i=0; i < nums.length; i++) {
             if(nums[i] != 0) {

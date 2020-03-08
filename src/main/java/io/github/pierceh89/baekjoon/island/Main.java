@@ -25,10 +25,10 @@ public class Main {
         }
     }
 
-    public static class Tuple {
+    static class Tuple {
         int r;
         int c;
-        public static Tuple of(int r, int c) {
+        static Tuple of(int r, int c) {
             Tuple t = new Tuple();
             t.r = r;
             t.c = c;
