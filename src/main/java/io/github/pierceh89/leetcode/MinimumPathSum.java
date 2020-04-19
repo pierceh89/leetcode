@@ -27,4 +27,18 @@ public class MinimumPathSum {
         }
         return sum[r-1][c-1];
     }
+
+    public void minPathBottomup(int[][] grid, int[][] minpath, int r, int c) {
+        for(int i=0; i<r; i++) {
+            for(int j=0; j<c; j++) {
+                if (i==0 && j==0) {
+                    minpath[i][j] = grid[i][j];
+                    continue;
+                }
+                int a = i-1 >=0 ? minpath[i-1][j] : Integer.MAX_VALUE;
+                int b = j-1 >=0 ? minpath[i][j-1] : Integer.MAX_VALUE;
+                minpath[i][j] = Math.min(a,b) + grid[i][j];
+            }
+        }
+    }
 }
