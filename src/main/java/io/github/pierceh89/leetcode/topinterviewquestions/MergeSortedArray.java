@@ -1,4 +1,4 @@
-package io.github.pierceh89.leetcode;
+package io.github.pierceh89.leetcode.topinterviewquestions;
 
 /**
  * Time Complexity is O(m + n)
@@ -27,6 +27,30 @@ public class MergeSortedArray {
                     p1--;
                 }
             }
+        }
+    }
+
+    // second solution written on Aug. 6th
+    // https://leetcode.com/explore/featured/card/top-interview-questions-easy/96/sorting-and-searching/587/
+    public void merge2(int[] nums1, int m, int[] nums2, int n) {
+        int i=m+n-1;
+        int j=m-1, k=n-1;
+        for(; j>=0 && k>=0; i--) {
+            if (nums1[j]>nums2[k]) {
+                nums1[i]=nums1[j];
+                j--;
+            } else {
+                nums1[i]=nums2[k];
+                k--;
+            }
+        }
+        for(; j>=0; j--) {
+            nums1[i] = nums1[j];
+            i--;
+        }
+        for(; k>=0; k--) {
+            nums1[i] = nums2[k];
+            i--;
         }
     }
 
